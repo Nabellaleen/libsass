@@ -1,5 +1,7 @@
 #define SASS_INTERFACE
 
+#include "winexport.h"
+
 #ifdef __cplusplus
 extern "C" {
 #endif
@@ -44,17 +46,17 @@ struct sass_folder_context {
   char* error_message;
 };
 
-struct sass_context*        sass_new_context        (void);
-struct sass_file_context*   sass_new_file_context   (void);
-struct sass_folder_context* sass_new_folder_context (void);
+LIBSASS_EXPORT struct sass_context*        sass_new_context        (void);
+LIBSASS_EXPORT struct sass_file_context*   sass_new_file_context   (void);
+LIBSASS_EXPORT struct sass_folder_context* sass_new_folder_context (void);
 
-void sass_free_context        (struct sass_context* ctx);
-void sass_free_file_context   (struct sass_file_context* ctx);
-void sass_free_folder_context (struct sass_folder_context* ctx);
+LIBSASS_EXPORT void sass_free_context        (struct sass_context* ctx);
+LIBSASS_EXPORT void sass_free_file_context   (struct sass_file_context* ctx);
+LIBSASS_EXPORT void sass_free_folder_context (struct sass_folder_context* ctx);
 
-int sass_compile            (struct sass_context* ctx);
-int sass_compile_file       (struct sass_file_context* ctx);
-int sass_compile_folder     (struct sass_folder_context* ctx);
+LIBSASS_EXPORT int sass_compile            (struct sass_context* ctx);
+LIBSASS_EXPORT int sass_compile_file       (struct sass_file_context* ctx);
+LIBSASS_EXPORT int sass_compile_folder     (struct sass_folder_context* ctx);
 
 #ifdef __cplusplus
 }
