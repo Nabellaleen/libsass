@@ -11,3 +11,4 @@ bin/*
 *.gem
 .svn/*
 libsass/*
+.gitattributes
