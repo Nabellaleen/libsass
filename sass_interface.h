@@ -1,6 +1,7 @@
 #define SASS_INTERFACE
 
 #include "winexport.h"
+#include "sass.h"
 
 #ifdef __cplusplus
 extern "C" {
