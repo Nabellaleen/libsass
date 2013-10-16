@@ -23,6 +23,7 @@ stamp-h1
 *.o
 *.lo
 *.a
+
 .deps/
 .libs/
 
@@ -30,3 +31,12 @@ stamp-h1
 
 sassc++
 libsass.la
+
+# ISoft
+
+a.out
+bin/*
+*.gem
+.svn/*
+libsass/*
+.gitattributes
