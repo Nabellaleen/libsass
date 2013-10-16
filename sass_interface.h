@@ -30,6 +30,8 @@ struct sass_context {
   int error_status;
   char* error_message;
   struct Sass_C_Function_Data* c_functions;
+  char** included_files;
+  int num_included_files;
 };
 
 struct sass_file_context {
@@ -39,6 +41,8 @@ struct sass_file_context {
   int error_status;
   char* error_message;
   struct Sass_C_Function_Data* c_functions;
+  char** included_files;
+  int num_included_files;
 };
 
 struct sass_folder_context {
@@ -48,6 +52,8 @@ struct sass_folder_context {
   int error_status;
   char* error_message;
   struct Sass_C_Function_Data* c_functions;
+  char** included_files;
+  int num_included_files;
 };
 
 LIBSASS_EXPORT struct sass_context*        sass_new_context        (void);
